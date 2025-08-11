@@ -1,22 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
 
-*{
-    padding: 0;
+html, body {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    color: #fff !important;
+    background-color: #111827;
+    max-width: 100%;
+    min-width: 352px !important;
+}
+ul, li {
     margin: 0;
-    background-color: black;
-    color:white;
-    box-sizing: border-box;;
-}
-.nav-links{
-    padding: 20px;
+    padding: 0;
     list-style: none;
-    display: flex;
-    gap: 20px;
 }
-.navbar{
-    display: flex;
-    justify-content: flex-end;
-    font-size: larger;
-    font-weight: bolder;
+.logo{
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size:large;
+    font-weight: 600;
 }
 .navbar a{
     text-decoration: none;
@@ -29,15 +32,22 @@
     justify-content: space-around;
     margin-right: auto;
     margin-left: auto;
-    padding:0px 30px;
-
+    font-size: larger;
+    margin-top:0px;
+    margin:30px;
 }
-.hero-text{
-    align-items:right;
-    font-weight:500 ;
-    font-size:30px;
-    margin:auto 50px;
-    padding:auto 300px;
+.hero-h1 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-right:50px;
+    text-align: left;
+}
+.hero Button{
+    font-size:large;
+}
+.hero-text {
+    margin: 50px 50px;
+    text-align: left;
 }
 .hero img{
     max-width:100%;
@@ -45,17 +55,15 @@
     padding-right: 32px;
 }
 .para{
-    opacity: 0.8;
+    opacity: 0.6;
+    font-size:20px;
 }
-.hero-h1{
-    font-size:8.30 rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}   
+.parag{
+    opacity:0.8;
+}
 .hero-button{
     padding: 10px 20px;
     font-size: 1.2rem;
-    font-weight: bold;
     color:white;
     background-color:#0D6EFD;
     border: none;
@@ -68,10 +76,27 @@
     justify-content:space-between;
     color: white;
     text-align: left;
-    max-width:960px;
     margin:0 20px;
 }
 .foot-text{
     max-width: 200px;
 }
-
+.end-text{
+    color:#a0a0a0;
+    text-align: left;
+    margin:1rem 0;
+}
+.user_input{
+    width: 80%;
+    color:#a0a0a0;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #374151;
+    border-radius: 50px;
+    position: relative;
+    top: -70px;
+    margin-left: 6%;
+}
+login_page{
+    max-width:60%;  
+}
