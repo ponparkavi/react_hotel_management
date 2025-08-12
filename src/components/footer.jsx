@@ -1,6 +1,12 @@
 import { Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import googleplay from "../assets/images/google_play.webp";
+import appleStore from "../assets/images/apple_store.webp";
 
 export default function Footer() {
   return (
@@ -10,12 +16,19 @@ export default function Footer() {
         <div className="foot-container">
           <div className="foot-text">
             <h5 className="fw-bold">HD</h5>
-            <h5><span className="text-primary">H</span>oli<span className="text-primary">D</span>ay</h5>
-            <p className="end-text">Discover the most outstanding articles on all topics of life</p>
+            <h5>
+              <span className="text-primary">H</span>oli
+              <span className="text-primary">D</span>ay
+            </h5>
+            <p className="end-text">
+              Discover the most outstanding articles on all topics of life
+            </p>
           </div>
           <div className="foot-text">
             <h5>Support</h5>
-            <p className="end-text">Help Center <br></br>Safety information Cancellation options</p>
+            <p className="end-text">
+              Help Center <br></br>Safety information Cancellation options
+            </p>
           </div>
           <div className="foot-text">
             <div className="footer-section">
@@ -27,12 +40,13 @@ export default function Footer() {
                 <a href="#" className="text-white">
                   <FontAwesomeIcon icon={faTwitter} />
                 </a>
-                <a href="#" className="text-white">      
+                <a href="#" className="text-white">
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
               </div>
-              <div>
-                <img src=".image/go_ogle.webp" alt="" />
+              <div className="d-flex app-store-icons">
+                <img src={googleplay} alt="googlePlay" />
+                <img src={appleStore} alt="appleStore" />
               </div>
             </div>
           </div>

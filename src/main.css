@@ -79,7 +79,7 @@ ul, li {
     margin:0 20px;
 }
 .foot-text{
-    max-width: 200px;
+    max-width: 30%;
 }
 .end-text{
     color:#a0a0a0;
@@ -99,4 +99,32 @@ ul, li {
 }
 login_page{
     max-width:60%;  
+}
+
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.app-store-icons img {
+    width: 120px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.search {
+    width: 50px;
+    height: 50px;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+.main-section {
+    min-height: 400px;
+}
+
+.dropdown-item {
+    border-radius: 3rem;
 }
