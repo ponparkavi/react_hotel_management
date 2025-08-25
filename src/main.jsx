@@ -8,6 +8,8 @@ import Login from "./components/login.jsx";
 import Help from "./components/help.jsx";
 import Contact from "./components/contact.jsx";
 import About from "./components/about.jsx";
+import HotelMain from "./components/hotel-main.jsx";
+import RoomDetails from "./components/room-details.jsx";
 
 export default function Main() {
   return (
@@ -20,7 +22,9 @@ export default function Main() {
           <Route path="/signup" element={<Login />} />
           <Route path="/help" element={<Help />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/ab" element={<About />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/hotel/:id" element={<HotelMain />} />
+          <Route path="/room/:id" element={<RoomDetails />} />
         </Routes>
         <Footer />
       </Router>

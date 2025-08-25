@@ -2,14 +2,13 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
-
 const getQueryParam = () => {
-  return window.location.pathname === "/login" ? "login" : "signup";
+  const params = new URLSearchParams(window.location.search);
+  return params.get("mode") === "signup" ? "signup" : "login";
 };
 
 export default function Login() {
   const mode = getQueryParam() || "login"; // default: login
-
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -21,7 +20,6 @@ export default function Login() {
 
   const validateField = (name, value) => {
     let error = "";
-
     if (name === "email") {
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
         error = "Enter valid email";
@@ -42,7 +40,6 @@ export default function Login() {
         error = "Enter valid 10-digit phone number";
       }
     }
-
     setErrors((prev) => ({ ...prev, [name]: error }));
   };
 
@@ -51,15 +48,12 @@ export default function Login() {
     setTouched((prev) => ({ ...prev, [name]: true }));
     validateField(name, value);
   };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     // validate all fields
     Object.keys(formData).forEach((field) => {
       if (mode === "login" && (field === "username" || field === "phone"))
